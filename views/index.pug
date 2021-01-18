@@ -1,0 +1,12 @@
+extends layout
+
+block content
+
+  body
+    form(action='/', method='POST')
+      p
+        | Command:
+        input(type='text', name='command', value='')
+      input(type='submit', value='Submit')
+    if result
+      | result: #{result}
